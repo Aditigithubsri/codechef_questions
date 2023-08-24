@@ -1,0 +1,1046 @@
+Ques 1-Chef wants to appear in a competitive exam. To take the exam, there are following requirements:
+
+Minimum age limit is 
+ 
+X (i.e. Age should be greater than or equal to 
+ 
+X).
+Age should be strictly less than 
+ 
+Y.
+Chef's current Age is 
+ 
+A. Find whether he is currently eligible to take the exam or not.
+
+Input Format
+First line will contain 
+ 
+T, number of test cases. Then the test cases follow.
+Each test case consists of a single line of input, containing three integers 
+ 
+,
+ 
+,
+X,Y, and 
+ 
+A as mentioned in the statement.
+Output Format
+For each test case, output YES if Chef is eligible to give the exam, NO otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+Constraints
+1
+≤
+ 
+≤
+1000
+1≤T≤1000
+20
+≤
+ 
+<
+ 
+≤
+40
+20≤X<Y≤40
+10
+≤
+ 
+≤
+50
+10≤A≤50
+Sample 1:
+Input
+Output
+5
+21 34 30
+25 31 31
+22 29 25
+20 40 15
+28 29 28
+YES
+NO
+YES
+NO
+YES
+Explanation:
+Test case 
+1
+1: The age of Chef is 
+30
+30. His age satisfies the minimum age limit as 
+30
+≥
+21
+30≥21. Also, it is less than the upper limit as 
+30
+<
+34
+30<34. Thus, Chef is eligible to take the exam.
+
+Test case 
+2
+2: The age of Chef is 
+31
+31. His age satisfies the minimum age limit as 
+31
+≥
+25
+31≥25. But, it is not less than the upper limit as 
+31
+≮
+31
+31≮31. Thus, Chef is not eligible to take the exam.
+
+Test case 
+3
+3: The age of Chef is 
+25
+25. His age satisfies the minimum age limit as 
+25
+≥
+22
+25≥22. Also, it is less than the upper limit as 
+25
+<
+29
+25<29. Thus, Chef is eligible to take the exam.
+
+Test case 
+4
+4: The age of Chef is 
+15
+15. His age does not satisfy the minimum age limit as 
+15
+<
+20
+15<20. Thus, Chef is not eligible to take the exam.
+Answer-
+const A=parseInt(require('readline-sync').question("Enter the current age:"))
+const X=parseInt(require('readline-sync').question("Enter the minimum age:"))
+const Y=parseInt(require('readline-sync').question("Enter the maximum age:"))
+function age(){
+  if(X>A<Y){
+    console.log("yes");
+  }else{
+    console.log("no");
+  }
+}
+age();
+
+
+Question 2
+Somu went to the gym today. He decided to do 
+ 
+X sets of squats. Each set consists of 
+15
+15 squats. Determine the total number of squats that he did today.
+
+Input Format
+The first line contains a single integer 
+ 
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains an integer 
+ 
+X — the total number of sets of squats that Somu did.
+Output Format
+For each test case, output the total number of squats done by Somu.
+
+Constraints
+1
+≤
+ 
+≤
+1000
+1≤T≤1000
+1
+≤
+ 
+≤
+1
+0
+5
+1≤X≤10 
+5
+
+answer 2
+const X=parseInt(require('readline-sync').question("Enter number of squats in the day: "));
+function my(){
+    const T = 15 * X;
+    console.log(T);
+    
+    
+    
+}
+my();
+
+question 3
+Chef wants to become fit for which he decided to walk to the office and return home by walking. It is known that Chef's office is 
+ 
+X km away from his home.
+
+If his office is open on 
+5
+5 days in a week, find the number of kilometers Chef travels through office trips in a week.
+
+Input Format
+First line will contain 
+ 
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line consisting of single integer 
+ 
+X.
+Output Format
+
+
+
+For each test case, output the number of kilometers Chef travels through office trips in a week.
+
+
+
+Answer-
+const X=parseInt(require('readline-sync').question("Enter the distance of chef's ofice in km: "));
+function fitnes(){
+    const T=((X*2)*5);
+    console.log(T);
+}
+fitnes();
+
+question-
+hef invented a modified wordle.
+
+There is a hidden word 
+ 
+S and a guess word 
+ 
+T, both of length 
+5
+5.
+
+Chef defines a string 
+ 
+M to determine the correctness of the guess word. For the 
+ 
+ 
+ℎ
+i 
+th
+  index:
+
+If the guess at the 
+ 
+ 
+ℎ
+i 
+th
+  index is correct, the 
+ 
+ 
+ℎ
+i 
+th
+  character of 
+ 
+M is 
+G
+G.
+If the guess at the 
+ 
+ 
+ℎ
+i 
+th
+  index is wrong, the 
+ 
+ 
+ℎ
+i 
+th
+  character of 
+ 
+M is 
+B
+B.
+Given the hidden word 
+ 
+S and guess 
+ 
+T, determine string 
+ 
+M.
+
+Input Format
+First line will contain 
+ 
+T, number of test cases. Then the test cases follow.
+Each test case contains of two lines of input.
+First line contains the string 
+ 
+S - the hidden word.
+Second line contains the string 
+ 
+T - the guess word.
+
+Answer
+let S= (require('readline-sync').question("Enter the string: " +" "));
+let N=(require('readline-sync').question("Enter the string: "+" "));
+let T=" ";
+let e=" ";
+function chef(){
+    for(let i=0;i<=T;i++){
+            
+        }
+        for(let j=0;j<5;j++){
+            if(S.indexOf(j)==N.indexOf(j)){
+                console.log(e=e+'G');
+            }
+            else{
+                console.log(e=e+'B');
+            }
+        }
+    }
+    chef();
+
+question
+There are three people sitting in a room - Alice, Bob, and Charlie. They need to decide on the temperature to set on the air conditioner. Everyone has a demand each:
+
+Alice wants the temperature to be at least 
+ 
+A degrees.
+Bob wants the temperature to be at most 
+ 
+B degrees.
+Charlie wants the temperature to be at least 
+ 
+C degrees.
+Can they all agree on some temperature, or not?
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of a single line which contains three integers - 
+ 
+,
+ 
+,
+ 
+A,B,C.
+Output Format
+For each test case, output on a new line, "Yes" or "No". "Yes", if they can decide on some temperature which fits all their demands. Or "No", if no temperature fits all their demands.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings NO, nO, No, and no will all be treated as identical).
+
+answer-
+const Alice=(require('readline-sync').question("Enter the temp alice wants: "));
+const Bob=(require('readline-sync').question("Enter the temp bob wamts: "));
+const Charlie=(require('readline-sync').question("Enter the temp charlie wants: "));
+function temp(){
+    if(Bob>=Alice && Bob>=Charlie){
+        console.log("yes");
+        
+    }
+    else{
+        console.log("no");
+    }
+}
+temp();
+
+Question
+Chef had collected 
+ 
+N notes of Rs. 
+2000
+2000 to pay his total college fees. However, the government banned Rs. 
+2000
+2000 notes.
+
+Chef wants to pay the same amount using Rs. 
+500
+500 notes only. Find the number of notes Chef needs.
+
+Input Format
+Each test case consists of a single integer 
+ 
+N - the number of notes of Rs. 
+2000
+2000 that Chef has collected.
+
+Output Format
+Output a single integer - the number of Rs. 
+500
+500 notes needed.
+
+Constraints
+1
+≤
+ 
+≤
+100
+1≤N≤100
+Answer-
+const N=(require('readline-sync').question("no. of notes of 2000 :"));
+let T=0;
+let y=0;
+function notes(){
+    T=(N*2000)/500;
+  
+    
+    console.log(T);
+}
+notes();
+
+Question-
+In the new CodeChef Learn module, under the "Learn Problem Solving" section, there are two courses for each language. For eg. "Python Beginner - Part 1" and "Python Beginner - Part 2". These courses help you get started with CodeChef contests.
+
+Currently there are courses for 4 languages, and hence there are 8 courses in this section. But suppose there are courses for 
+ 
+N languages, what will be the total number of courses in this section?
+
+Input Format
+The only line of input will contain a single integer 
+ 
+N, denoting the number of languages for which there are courses.
+
+Output Format
+Output on a single line the total number of courses in the section.
+
+Answer-
+const N=(require('readline-sync').question("no. of courses:"));
+let T=0;
+function course(){
+    T=2*N;
+  
+    
+    console.log(T);
+}
+course();
+
+Question-
+In ChefLand, human brain speed is measured in bits per second (bps). Chef has a threshold limit of 
+ 
+X bits per second above which his calculations are prone to errors. If Chef is currently working at 
+ 
+Y bits per second, is he prone to errors?
+
+If Chef is prone to errors print YES, otherwise print NO.
+
+Input Format
+The only line of input contains two space separated integers 
+ 
+X and 
+ 
+Y — the threshold limit and the rate at which Chef is currently working at.
+
+Output Format
+If Chef is prone to errors print YES, otherwise print NO.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings yes, Yes, yEs, and YES will all be treated as identical).
+
+Constraints
+1
+≤
+ 
+,
+ 
+≤
+100
+1≤X,Y≤100
+
+Answer-
+const X=(require('readline-sync').question("Threshold limit of chef's brain: "));
+const Y=(require('readline-sync').question("currently working brain of checf: "))
+let T=0;
+function brain(){
+    if(Y<X){
+        console.log("NO");
+    }
+    else{
+        console.log("YES");
+    }
+}
+brain();
+
+Question-
+There are three friends and a total of 
+ 
+N candies.
+There will be a fight amongst the friends if all of them do not get the same number of candies.
+
+Chef wants to divide all the candies such that there is no fight. Find whether such distribution is possible.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+ 
+N - the number of candies.
+Output Format
+For each test case, output YES, if we can distribute all the candies between the three friends equally. Otherwise output NO.
+
+You can output each character of the answer in uppercase or lowercase. For example, the strings yEs, yes, Yes, and YES are considered the same.
+
+Answer-
+const N=(require('readline-sync').question("number of candles: "));
+
+let T=0;
+function candies(){
+    while(N!=0){
+        if(N%3==0){
+            
+        
+        console.log("YES");
+        }
+    
+    else{
+        console.log("NO");
+    }
+}
+}
+
+candies();
+
+Question-
+Chef and his girlfriend go on a date. Chef took 
+ 
+X dollars with him, and was quite sure that this would be enough to pay the bill. At the end, the waiter brought a bill of 
+ 
+Y dollars. Print "YES" if Chef has enough money to pay the bill, or "NO" if he has to borrow from his girlfriend and leave a bad impression on her.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of a single line of input, containing two space-separated integers 
+ 
+X and 
+ 
+Y.
+Output Format
+For each test case, output on a new line "YES" if Chef has enough money to pay the bill and "NO" otherwise.
+
+You may print each character of the string in either uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+Answer-
+const X=(require('readline-sync').question("Dollars he contains: "));
+const Y=(require('readline-sync').question("Bill: "));
+
+let T=0;
+function bill(){
+    if(Y<X){
+        console.log('NO');
+    }
+    else{
+        console.log('YES');
+        
+    }
+    
+    
+    }
+
+bill();
+
+Question-
+n a coding contest, there are prizes for the top rankers. The prize scheme is as follows:
+
+Top 
+10
+10 participants receive rupees 
+ 
+X each.
+Participants with rank 
+11
+11 to 
+100
+100 (both inclusive) receive rupees 
+ 
+Y each.
+Find the total prize money over all the contestants.
+
+Input Format
+First line will contain 
+ 
+T, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, two integers 
+ 
+X and 
+ 
+Y - the prize for top 
+10
+10 rankers and the prize for ranks 
+11
+11 to 
+100
+100 respectively.
+Output Format
+For each test case, output the total prize money over all the contestants.
+
+Answer-
+const X=(require('readline-sync').question("Price money for Top10 contestants: "));
+const Y=(require('readline-sync').question("Price money for Top 11-100 contestants: "));
+
+let T=0;
+function price(){
+   T=((10*X)+(90*Y));
+   console.log(T);
+    
+    }
+
+price();
+
+Question-
+Harsh was recently gifted a book consisting of 
+ 
+N pages. Each page contains exactly 
+ 
+M words printed on it. As he was bored, he decided to count the number of words in the book.
+
+Help Harsh find the total number of words in the book.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers on a single line, 
+ 
+N and 
+ 
+M — the number of pages and the number of words on each page, respectively.
+Output Format
+For each test case, output on a new line, the total number of words in the book.
+
+Answwr-
+const N=(require('readline-sync').question("No. of pages: "));
+const Y=(require('readline-sync').question("No.of words on page: "));
+
+let T=0;
+function words(){
+   T=N*Y;
+   console.log(T);
+    
+    }
+
+words();
+
+Question-
+Apple considers any iPhone with a battery health of 
+80
+%
+80% or above, to be in optimal condition.
+
+Given that your iPhone has 
+ 
+%
+X% battery health, find whether it is in optimal condition.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+The first and only line of each test case contains an integer 
+ 
+X — the battery health.
+Output Format
+For each test case, output on a new line, YES, if the battery is in optimal condition, and NO otherwise.
+
+You may print each character in uppercase or lowercase. For example, NO, no, No and nO, are all considered identical.
+
+Answer-
+const X=(require('readline-sync').question("Battery condition: "));
+
+let T=80;
+function batterylife(){
+   if(X>=T){
+       console.log("optimal condtion");
+   }
+   else{
+       console.log("not optimal condtion");
+   }
+    
+    }
+
+batterylife();
+
+Question-
+n a classic chase, Tom is running after Jerry as Jerry has eaten Tom's favourite food.
+
+Jerry is running at a speed of 
+ 
+X metres per second while Tom is chasing him at a speed of 
+ 
+Y metres per second. Determine whether Tom will be able to catch Jerry.
+
+Note that initially Jerry is not at the same position as Tom.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+ 
+X and 
+ 
+Y — the speeds of Jerry and Tom respectively.
+Output Format
+For each test case, output on a new line, YES, if Tom will be able to catch Jerry. Otherwise, output NO.
+
+You can print each character in uppercase or lowercase. For example NO, no, No, and nO are all considered the same.
+
+Answer-
+const X=(require('readline-sync').question("Speed of jerry "));
+const Y=(require('readline-sync').question("Speed of tom: "))
+let T=0;
+function speed(){
+   if(X<=Y){
+       console.log("YES");
+   }
+   else{
+       console.log("NO");
+   }
+    
+    }
+    speed();
+
+Question-
+Chef's current age is 
+20
+20 years, while Chefina's current age is 
+10
+10 years.
+Determine Chefina's age when Chef will be 
+ 
+X years old.
+
+Note: Assume that Chef and Chefina were born on same day and same month (just different year).
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+ 
+X, the age of Chef.
+Output Format
+For each test case, output Chefina's age when Chef will be 
+ 
+X years old.
+
+Answer-
+const X=(require('readline-sync').question("Age of chef "));
+function ageing(){
+   console.log("Chefine's age:"+ (X-10));
+    
+    }
+    ageing();
+
+Question-
+Write a program that accepts sets of three numbers, and prints the second-maximum number among the three.
+
+Input
+First line contains the number of triples, N.
+The next N lines which follow each have three space separated integers.
+Output
+For each of the N triples, output one new line which contains the second-maximum integer among the three.
+
+Constraints
+Answwr-
+const X=(require('readline-sync').question("Enter the number:"));
+const Y=(require('readline-sync').question("Enter the number:"));
+const Z=(require('readline-sync').question("Enter the number:"));
+
+let arr=[X,Y,Z];
+
+function number(){
+   arr.sort();
+   console.log(arr[1]);
+    }
+    number();
+
+Question-
+our friends want to attend a concert. Each ticket costs 
+ 
+X rupees.
+They have decided to go to the concert if and only if the total cost of the tickets does not exceed 
+1000
+1000 rupees.
+
+Determine whether they will be going to the concert or not.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of a single integer 
+ 
+X, the cost of each ticket.
+Output Format
+For each test case, output YES if they will be going to the concert, NO otherwise.
+
+You can print each character in uppercase or lowercase. For example, the strings YES, yes, Yes, and yES, are all considered identical.
+
+Answer-
+
+const X=(require('readline-sync').question("Enter cost of each ticket:"));
+
+
+function number(){
+   let T=X*4;
+   if(T<=1000){
+       console.log("YES");
+   }
+   else{
+       console.log("NO");
+   }
+   number();
+
+Question-
+In a certain month, Chef earned 
+ 
+X rupees while Chefina earned 
+ 
+Y rupees such that 
+ 
+>
+ 
+Y>X.
+Since they want to end up with exactly the same amount, they decide to donate the difference between their income to a charity.
+
+Find the amount they donate in the month.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+ 
+X and 
+ 
+Y — the income of Chef and Chefina in a month, respectively.
+Output Format
+For each test case, output on a new line, the amount they donate in the month.
+
+Answer-
+const x=(require('readline-sync').question("Income of chef:"));
+const y=(require('readline-sync').question("Income of chefina:"));
+let t=0;
+function income(){
+    t=x-y;
+    console.log(t);
+}
+income();
+
+Question-
+Our Chef took the above advice very seriously and decided to set a target for himself.
+
+Chef decides to solve at least 
+10
+10 problems every week for 
+4
+4 weeks.
+Given the number of problems he actually solved in each week over 
+4
+4 weeks as 
+ 
+1
+,
+ 
+2
+,
+ 
+3
+,
+P 
+1
+​
+ ,P 
+2
+​
+ ,P 
+3
+​
+ , and 
+ 
+4
+P 
+4
+​
+ , output the number of weeks in which Chef met his target.
+
+Input Format
+There is a single line of input, with 
+4
+4 integers 
+ 
+1
+,
+ 
+2
+,
+ 
+3
+,
+P 
+1
+​
+ ,P 
+2
+​
+ ,P 
+3
+​
+ , and 
+ 
+4
+P 
+4
+​
+ . These are the number of problems solved by Chef in each of the 
+4
+4 weeks.
+
+Output Format
+Output a single integer in a single line - the number of weeks in which Chef solved at least 
+10
+10 problems.
+
+Constraints
+
+Answer-
+let array=[];
+let size=4;
+let weeks=0;
+for(let i=0;i<size;i++){
+    array[i]=(require('readline-sync').question("enter the element:"));
+
+    if(array[i]>=10){
+        weeks++;
+        
+    }
+        console.log(weeks);
+}
+
+
+Question-
+There is a group of 
+ 
+N friends who wish to enroll in a course together. The course has a maximum capacity of 
+ 
+M students that can register for it. If there are 
+ 
+K other students who have already enrolled in the course, determine if it will still be possible for all the 
+ 
+N friends to do so or not.
+
+Input Format
+The first line contains a single integer 
+ 
+T - the number of test cases. Then the test cases follow.
+Each test case consists of a single line containing three integers 
+ 
+N, 
+ 
+M and 
+ 
+K - the size of the friend group, the capacity of the course and the number of students already registered for the course.
+Output Format
+For each test case, output Yes if it will be possible for all the 
+ 
+N friends to register for the course. Otherwise output No.
+
+You may print each character of Yes and No in uppercase or lowercase (for example, yes, yEs, YES will be considered identical).
+
+Constraints
+1
+≤
+ 
+≤
+1000
+1≤T≤1000
+1
+≤
+ 
+≤
+ 
+≤
+100
+1≤N≤M≤100
+0
+≤
+ 
+≤
+ 
+0≤K≤M
+
+Answer-
+let N=(require('readline-sync').question("size of the friend group:"));
+let M=(require('readline-sync').question("cpacity of course:"));
+let K=(require('readline-sync').question("number of students already registered:"));
+let array=[N,M,K];
+function capacity(){
+    let T=M-K;
+    if(T>=N){
+        console.log("YES");
+    }
+    else{
+        console.log('NO');
+    }
+}
+capacity();
+
+Question-
+Chef owns a car that can run 
+15
+15 kilometers using 
+1
+1 liter of petrol.
+He wants to attend a programming camp at DAIICT.
+
+ 
+X liters of petrol is present in Chef's car. The distance between his house and DAIICT is 
+ 
+Y kilometers.
+Determine whether Chef can attend the event and return to his home with the given amount of petrol.
+
+Note: Chef has to return back to home, so the total distance to be covered would be 
+2
+⋅
+ 
+2⋅Y.
+
+Input Format
+The first line of input will contain a single integer 
+ 
+T, denoting the number of test cases.
+Each test case consists of two space-separated integers 
+ 
+X and 
+ 
+Y — the amount of petrol in liter and the distance between Chef's house and DAIICT in kilometers, respectively.
+Output Format
+For each test case, print YES if it is possible for the chef to attend the event and return home, else, print NO.
+
+You may print each character in uppercase or lowercase. For example, Yes, yes, YES, and yES are all considered identical.
+
+Answer-
+let X=(require('readline-sync').question("amount of petrol:"));
+let Y=(require('readline-sync').question("The distance:"));
+
+let array=[X,Y];
+function distance(){
+    let T=15*X;
+    let D=2*Y
+    if(T<=D){
+        console.log("NO");
+    }
+    else{
+        console.log('YES');
+    }
+}
+distance();
+
+Question-
+
+
+
